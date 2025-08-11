@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Our Love Story — Flipbook</title>
+  <link rel="icon" type="image/png" href="assets/icon/heart.ico" />
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <!-- Confetti -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <h1>Happy Anniversary, My Love 💖</h1>
+    <p class="lead">A little story — page by page.</p>
+  </header>
+
+  <!-- Intro -->
+  <main id="intro" class="stage center">
+    <h2>Our Year, told like a flipbook</h2>
+    <p class="sub">Each moment, a memory. Each page, a piece of our journey.</p>
+    <p class="note" style="text-align: center;">
+      My pookieeee,<br><br>
+      Well, here’s a little flipbook of our memories and love from this year.<br><br>
+      Each page is a piece of my heart and a moment we’ve shared.<br><br>
+      Happy Anniversary, my love. Here’s to us, one page at a time 💖<br><br>
+      Always yours, lulu ❤️<br><br>
+      P.S. I love you more than words can say, and I’m so grateful for every moment with you. Here’s to many more pages in our story!<br><br>
+      P.P.S. I can’t wait to see what the next chapter holds for us!
+        </p>
+    <button id="startBtn" class="cta">Begin Our Journey</button>
+  </main>
+
+  <!-- Flipbook -->
+  <section id="flipbook" class="stage hidden">
+    <div class="book" aria-label="Love story book">
+      <article class="page" id="page1" data-index="1">
+        <div class="front">
+          <h2>💑 Our First Date</h2><br>
+            <p>
+              Remember that night? Just us, a little nervous, a lot excited—<br><br>
+              You smiled, I laughed, and the world felt lighter.<br><br>
+              We talked for hours, your hand found mine,<br><br>
+              That first date—simple, sweet, unforgettable.<br><br>
+              The start of something 
+          <button class="next-btn" data-next="page2">Next</button>
+        </div>
+      </article>
+
+      <article class="page hidden" id="page2" data-index="2">
+        <div class="front">
+          <h2>📸 Our First Photos</h2>
+            <p>Our first photos together... capturing laughter, shy smiles, and the spark in your eyes, reminding us how it all started.</p>
+          <div class="photos">
+            <img src="assets/images/Mon Amour.png" alt="Moment 1" loading="lazy" style="width:160px; height:160px; object-fit:cover;"/>
+            <img src="assets/images/Dec 2.jpg" alt="Moment 2" loading="lazy" style="width:160px; height:160px; object-fit:cover;"/>
+          </div><br>
+          <button class="next-btn" data-next="page3">Next</button>
+        </div>
+      </article>
+
+      <article class="page hidden" id="page3" data-index="3">
+        <div class="front">
+           <h2>💌 My Heart</h2><br>
+            <p>
+            Through every sunrise and every storm,<br><br>
+            Your love is the melody in my quietest dawn.<br><br> 
+            In laughter and tears, in whispers and light,<br><br>
+            You are my compass, my warmth in the night.<br><br>
+            Seasons may change, but one truth remains true—<br><br>
+            My heart finds its home, forever in you. <br><br>
+            </p>
+          <button id="revealSiteBtn" class="cta">Explore Full Site</button>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
