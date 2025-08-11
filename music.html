@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Music — Our Soundtrack</title>
+  <link rel="stylesheet" href="css/style.css"/>
+    <link rel="icon" type="image/png" href="/assets/icon/heart.ico" />
+  <style>
+    /* small local tweaks to look more like Spotify cards */
+    .music-wrap { max-width: 980px; margin: 20px auto; padding: 8px; }
+    .spotify-like { display:grid; grid-template-columns: 1fr; gap:12px; }
+    .playlist-card { background:white; padding:12px; border-radius:10px; box-shadow:0 6px 18px rgba(0,0,0,0.06); display:flex; gap:12px; align-items:center; }
+    .playlist-card img{width:84px;height:84px;border-radius:8px;object-fit:cover}
+    .playlist-info{flex:1}
+    .open-play{background:var(--pink-1);color:white;padding:8px 10px;border-radius:8px;border:0;cursor:pointer}
+  </style>
+</head>
+<body>
+  <nav class="nav small-nav">
+    <a href="full-site.html">⬅ Back to Hub</a>
+    <a href="music.html" class="active">Music</a>
+  </nav>
+
+  <main class="music-wrap">
+    <h2>🎵 Our Soundtrack</h2>
+    <p class="muted">A curated Spotify playlist capturing our favorite moments and memories together. Enjoy the songs that tell our story!</p>
+
+    <div class="spotify-like">
+
+      <!-- Playlist embed -->
+      <div class="playlist-card">
+        <img src="/assets/images/spotify/beautiful things.png" alt="Playlist cover">
+        <div class="playlist-info">
+          <strong>Beautiful Things</strong>
+          <p class="muted">Remember this song? The song that brought us together</p>
+        </div>
+        <button class="open-play" onclick="openEmbed('https://open.spotify.com/embed/track/6tNQ70jh4OwmPGpYy6R2o9?si=b743935879b246c4')">Open</button>
+      </div>
+      <div class="playlist-card">
+        <img src="/assets/images/spotify/perfect.png" alt="Playlist cover">
+        <div class="playlist-info">
+          <strong>You're Perferct</strong>
+          <p class="muted">This song reminds me of you. One of the reasons why iwon't let you go 😭💕</p>
+        </div>
+        <button class="open-play" onclick="openEmbed('https://open.spotify.com/embed/track/0tgVpDi06FyKpA1z0VMD4v?si=220a3abb8fad4ce0')">Open</button>
+      </div>
+      
+      <!-- Another playlist card -->
+      <div class="playlist-card">
+        <img src="/assets/images/spotify/Album cover.png" alt="Playlist cover">
+        <div class="playlist-info">
+          <strong>Our Anniversary Playlist</strong>
+          <p class="muted">Mixture of our favorite songs</p>
+        </div>
+        <button class="open-play" onclick="openEmbed('https://open.spotify.com/embed/playlist/37i9dQZF1EJHVODx1UVxk8')">Open</button>
+      </div> 
+      
+      <!-- Playlist 3 -->
+        <div class="playlist-card">
+          <img src="/assets/images/spotify/love songs.png" alt="Playlist cover">
+          <div class="playlist-info">
+            <strong>Throwback Vibes</strong>
+            <p class="muted">Love songs from around the world</p>
+          </div>
+          <button class="open-play" onclick="openEmbed('https://open.spotify.com/embed/playlist/54NligNynYpYlfzyEfwQJX')">Open</button>
+        </div>
+
+        <!-- Playlist 4 -->
+        <div class="playlist-card">
+          <img src="/assets/images/spotify/testify.png" alt="Playlist cover">
+          <div class="playlist-info">
+            <strong>Testify</strong>
+            <p class="muted">Perfect songs for worship and reflection</p>
+          </div>
+          <button class="open-play" onclick="openEmbed('https://open.spotify.com/embed/playlist/37i9dQZF1DXbQX7bVSkxBy')">Open</button>
+        </div>
+        
+        <div class="playlist-card">
+          <img src="/assets/images/spotify/rema.png" alt="Playlist cover">
+          <div class="playlist-info">
+            <strong>Another Banger</strong>
+            <p class="muted">Feel Rema's aura</p>
+          </div>
+          <button class="open-play" onclick="openEmbed('https://open.spotify.com/embed/playlist/37i9dQZF1DZ06evO2oBSta')">Open</button>
+        </div>
+
+        
+        <div class="playlist-card">
+          <img src="/assets/images/spotify/essie.png" alt="Playlist cover">
+          <div class="playlist-info">
+            <strong>Essise's Songs 💙</strong>
+            <p class="muted">Handpicked songs done by you</p>
+          </div>
+          <button class="open-play" onclick="openEmbed('https://open.spotify.com/embed/playlist/3wePhACsOeIBxQQpOIQPDc')">Open</button>
+        </div>
+
+        <div class="playlist-card">
+          <img src="/assets/images/spotify/R&B.png" alt="Playlist cover">
+          <div class="playlist-info">
+            <strong>R&B Playlists 💕</strong>
+            <p class="muted">R&B songs by you</p>
+          </div>
+          <button class="open-play" onclick="openEmbed('https://open.spotify.com/embed/playlist/6Na3uZhZUuARWPs1xYjXom')">Open</button>
+        </div>
+
+
+       
+      <!-- Big embed area -->
+      <div id="embedArea" style="margin-top:12px;">
+        <iframe id="embedFrame" src="https://open.spotify.com/embed/playlist/37i9dQZF1EJHVODx1UVxk8" width="100%" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    function openEmbed(src){
+      document.getElementById('embedFrame').src = src;
+      location.hash = 'embed';
+      window.scrollTo({top: document.getElementById('embedArea').offsetTop - 20, behavior: 'smooth'});
+    }
+  </script>
+  <script src="js/main.js"></script>
+</body>
+</html>
+<!-- This code creates a simple music page with embedded Spotify playlists. -->
+<!-- It includes a header, navigation, and a main section with playlist cards. -->
